@@ -33,7 +33,7 @@ export default function About() {
           </h2>
           <div className="mb-12 flex justify-center">
             <Image
-              src="/transport-poster.png"
+              src="images/transport-poster.png"
               alt="Перевезення по Європі від адреси до адресу"
               width={800}
               height={600}
