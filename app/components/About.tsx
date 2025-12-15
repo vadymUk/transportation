@@ -32,13 +32,13 @@ export default function About() {
             Про мене
           </h2>
           <div className="mb-12 flex justify-center">
-            <img
+            <Image
               src="/images/car.png"
               alt="Перевезення по Європі від адреси до адресу"
               width={800}
               height={600}
               className="rounded-2xl shadow-lg"
-              // priority
+              priority
             />
           </div>
           <div className="bg-gray-50 rounded-2xl p-8 mb-12">
