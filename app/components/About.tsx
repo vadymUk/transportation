@@ -34,7 +34,8 @@ export default function About() {
           <div className="mb-12 flex justify-center">
             <Image
               src="/images/car.png"
-              alt="Перевезення по Європі від адреси до адресу"
+              // alt="Перевезення по Європі від адреси до адресу"
+              alt="..."
               width={800}
               height={600}
               className="rounded-2xl shadow-lg"
