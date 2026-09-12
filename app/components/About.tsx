@@ -5,17 +5,12 @@ export default function About() {
     {
       icon: "🚗",
       title: "Комфортне авто",
-      description: "Renault Scenic — затишний та надійний автомобіль",
+      description: "Renault Scenic — затишний тa надійний автомобіль",
     },
     {
       icon: "🕒",
       title: "Гнучкий графік",
       description: "Підлаштуюся під ваші потреби та терміни",
-    },
-    {
-      icon: "📦",
-      title: "Доставка вантажів",
-      description: "Можу взяти передачу або невеликий вантаж",
     },
     {
       icon: "💰",
@@ -43,29 +38,27 @@ export default function About() {
           </div>
           <div className="bg-gray-50 rounded-2xl p-8 mb-12">
             <p className="text-lg text-gray-700 leading-relaxed text-center">
-              Я — Вадим, приватний перевізник.
-              Маю власний автомобіль Renault Scenic, регулярно виконую поїздки
-              по Європі. Заберу вас прямо від дверей і доставлю куди потрібно —
-              без черг, пересадок і затримок.
+              Я — Вадим, приватний перевізник. Маю власний автомобіль Renault
+              Scenic, регулярно виконую поїздки по Європі. Заберу вас прямо від
+              дверей і доставлю куди потрібно — без черг, пересадок і затримок.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="h-full rounded-xl border border-gray-200 bg-white p-5 text-center transition-shadow hover:shadow-lg sm:p-6"
+            >
+              <div className="mb-4 text-4xl">{benefit.icon}</div>
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                {benefit.title}
+              </h3>
+              <p className="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-
