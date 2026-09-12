@@ -1,10 +1,20 @@
-
 "use client";
 
 import { useRef } from "react";
 
+function getLocalDate() {
+  const today = new Date();
+
+  return [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0"),
+  ].join("-");
+}
+
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
+  const minimumDate = getLocalDate();
 
   const handleSubmit = () => {
     // Очищаємо форму після невеликої затримки, щоб форма встигла відправитися
@@ -40,15 +50,16 @@ export default function Contact() {
                     <div className="text-blue-600">+48 576 222 842</div>
                   </div>
                 </a>
-               
-                  
+
                 <a
                   href="viber://chat?number=+48576222842"
                   className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 >
                   <span className="text-3xl">📱</span>
                   <div>
-                    <div className="font-semibold text-gray-900">Viber, WhatsApp</div>
+                    <div className="font-semibold text-gray-900">
+                      Viber, WhatsApp
+                    </div>
                     <div className="text-blue-600">+48 576 222 842 </div>
                   </div>
                 </a>
@@ -60,13 +71,13 @@ export default function Contact() {
               <h3 className="text-2xl font-semibold mb-6 text-gray-900">
                 Форма замовлення
               </h3>
-             
-              <form 
+
+              <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="bg-white rounded-xl p-6 shadow-md" 
-                target="_blank" 
-                action="https://formsubmit.co/vadimcicura@gmail.com" 
+                className="bg-white rounded-xl p-6 shadow-md"
+                target="_blank"
+                action="https://formsubmit.co/vadimcicura@gmail.com"
                 method="POST"
               >
                 <div className="space-y-4">
@@ -145,6 +156,7 @@ export default function Contact() {
                         type="date"
                         id="date"
                         name="date"
+                        min={minimumDate}
                         required
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
@@ -188,7 +200,8 @@ export default function Contact() {
                 </div>
               </form>
               <p className="mt-4 text-sm text-gray-600 text-center">
-                Після відправки форми ми з вами зв'яжемося за вказаним номером для підтвердження вашої поїздки.
+                Після відправки форми ми з вами зв&apos;яжемося за вказаним
+                номером для підтвердження вашої поїздки.
               </p>
             </div>
           </div>

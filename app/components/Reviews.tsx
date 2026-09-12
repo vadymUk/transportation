@@ -37,7 +37,9 @@ export default function Reviews() {
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
+                <p className="text-gray-700 mb-4 italic">
+                  &quot;{review.text}&quot;
+                </p>
                 <p className="text-gray-900 font-semibold">— {review.name}</p>
               </div>
             ))}
